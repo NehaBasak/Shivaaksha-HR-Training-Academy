@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const course = button.getAttribute("data-course");
 
             const message =
-                "Hello Shivaaksha CodeCraft Academy,\n" +
+                "Hello Shivaaksha HR Training Academy,\n" +
                 "I am interested in the " + course + " course.\n" +
                 "Please share the details.";
 
