@@ -89,11 +89,15 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-7 hero-content">
-            <span class="hero-tag">WELCOME TO SHIVAAKSHA</span>
+             <span class="hero-tag">
+              <span>WELCOME</span>
+              <span>TO</span>
+              <span>SHIVAAKSHA</span>
+            </span>
 
             <h1>
               Build Your Career With
-              <span>Professional HR Training</span>
+              <span class="typing-text">Professional HR <br> Training</span>
             </h1>
 
             <p>
@@ -594,6 +598,32 @@
         } else {
           console.error("Kursor library not loaded!");
         }
+      });
+    </script>
+
+    <!-- Welcome Letter Up And Down -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const words = document.querySelectorAll(".hero-tag > span");
+
+        let delay = 0;
+
+        words.forEach((word) => {
+          const text = word.textContent.trim();
+          word.innerHTML = "";
+
+          text.split("").forEach((letter) => {
+            const span = document.createElement("span");
+
+            span.classList.add("letter");
+            span.textContent = letter;
+            span.style.animationDelay = `${delay}s`;
+
+            word.appendChild(span);
+
+            delay += 0.08;
+          });
+        });
       });
     </script>
   </body>
