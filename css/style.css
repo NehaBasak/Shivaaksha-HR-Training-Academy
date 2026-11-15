@@ -1,0 +1,1467 @@
+/* ===============================
+   GLOBAL SETTINGS
+================================ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --primary: #f20a35;
+  --secondary: #079c91;
+  --purple: #79008d;
+
+  --dark: #08090d;
+  --dark-card: #15121b;
+  --light: #ffffff;
+  --muted: #b8b5c2;
+
+  --gradient: linear-gradient(120deg, #f20a35, #79008d);
+
+  --gradient-teal: linear-gradient(120deg, #079c91, #79008d);
+
+  --border-color: rgba(255, 255, 255, 0.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--dark);
+  color: var(--light);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.custom-navbar {
+  background: rgba(8, 13, 27, 0.94);
+  backdrop-filter: blur(15px);
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.3s;
+}
+
+.custom-navbar.scrolled {
+  padding: 9px 0;
+  background: #080d1b;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.navbar-brand small {
+  display: block;
+  font-size: 10px;
+  color: #a5a5ff;
+  letter-spacing: 1px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.nav-link {
+  color: #dce1ee !important;
+  margin: 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #9a8cff !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--gradient);
+  bottom: 0;
+  left: 8px;
+  transition: 0.3s;
+}
+
+.nav-link:hover::after,
+
+.nav-link.active::after {
+  width: calc(100% - 16px);
+}
+
+/* ===============================
+   ABOUT PAGE BANNER IMAGE
+================================ */
+.about-page-banner {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../assets/LatesttrendsinHRTraininganddevelopment2_1704018773\ \(1\).avif") !important;
+  background-size: cover !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ===============================
+   COURSES PAGE BANNER IMAGE
+================================ */
+.courses-page-banner {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../assets/Which-HR-Course-Should-You-Choose_-A-Expert-Guide-Based-on-Your-Career-Stage.png") !important;
+  background-size: cover !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ===============================
+   SERVICES PAGE BANNER IMAGE
+================================ */
+.services-page-banner {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../assets/HR-Services.jpg") !important;
+  background-size: cover !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ===============================
+   CONTACT PAGE BANNER IMAGE
+================================ */
+.contact-page-banner {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../assets/businessman-shows-outstretched-hand-with-social-icon-virtual-screen-contact-us-customer-support-hotline-people-connect_1021907-9545.avif") !important;
+  background-size: cover !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 350px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn-primary {
+  background: var(--gradient);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(99, 91, 255, 0.4);
+  background: linear-gradient(120deg, #5148e5, #9333ea);
+}
+
+.btn-outline-light {
+  border-radius: 8px;
+  padding: 12px 25px;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.hero-section {
+  min-height: 100vh;
+  padding: 150px 0 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(99, 91, 255, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(139, 92, 246, 0.15),
+      transparent 30%
+    ),
+    var(--dark);
+}
+
+.hero-tag,
+.section-tag {
+  color: #a69aff;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.hero-content h1 {
+  font-size: clamp(36px, 5vw, 65px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 22px 0;
+}
+
+.hero-content h1 span {
+  display: block;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-content > p {
+  max-width: 570px;
+  font-size: 16px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 70px rgba(99, 91, 255, 0.2);
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* .hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 55px;
+}
+
+.hero-stats h3 {
+  font-size: 27px;
+  color: #a69aff;
+  font-weight: 800;
+}
+
+.hero-stats p {
+  font-size: 12px;
+  margin: 0;
+} */
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 55px;
+}
+
+.hero-stats h3 {
+  font-size: 27px;
+  color: #a69aff;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.hero-stats p {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* ===============================
+   COMMON SECTIONS
+================================ */
+.section-padding {
+  padding: 100px 0;
+}
+
+.bg-light-dark {
+  background: #0d1426;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 55px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+.section-text {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.about-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* ===============================
+   SERVICE CARDS
+================================ */
+.service-card {
+  height: 100%;
+  padding: 35px 25px;
+  background: var(--dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: 0.4s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+  box-shadow: 0 15px 40px rgba(99, 91, 255, 0.15);
+}
+
+.service-card i,
+.info-card i {
+  font-size: 35px;
+  color: #9b8cff;
+  margin-bottom: 25px;
+}
+
+.service-card h4 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 14px;
+}
+
+.service-card a,
+.course-content a {
+  color: #a99cff;
+  font-weight: 600;
+}
+
+/* ===============================
+   COURSE CARDS
+================================ */
+/* .course-card {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.4s;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(99, 91, 255, 0.2);
+} */
+
+.course-card {
+  height: 100%;
+  border-radius: 20px;
+  background: var(--dark-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.5s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(
+    135deg,
+    rgba(242, 10, 53, 0.15),
+    rgba(121, 0, 141, 0.2),
+    rgba(7, 156, 145, 0.12)
+  );
+  border-color: rgba(242, 10, 53, 0.5);
+  box-shadow: 0 15px 35px rgba(121, 0, 141, 0.2);
+}
+
+.course-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.course-content {
+  padding: 25px;
+}
+
+.course-content h4 {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.course-content p {
+  font-size: 14px;
+}
+
+/* ===============================
+   PAGE BANNER
+================================ */
+.page-banner {
+  padding: 170px 0 90px;
+  background:
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(99, 91, 255, 0.25),
+      transparent 50%
+    ),
+    #0d1426;
+}
+
+.page-banner h1 {
+  font-size: clamp(35px, 5vw, 55px);
+  font-weight: 800;
+}
+
+.page-banner p {
+  margin: 10px 0 0;
+}
+
+/* ===============================
+   MISSION & VISION
+================================ */
+.info-card {
+  height: 100%;
+  padding: 40px;
+  background: var(--dark-card);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.3s;
+}
+
+.info-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+}
+
+.info-card h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* ===============================
+   CTA SECTION
+================================ */
+.cta-section {
+  padding: 80px 20px;
+  background: var(--gradient);
+}
+
+.cta-section h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+}
+
+.cta-section p {
+  color: #eeeeff;
+  margin: 15px 0 25px;
+}
+
+/* ===============================
+   CONTACT
+================================ */
+.contact-info,
+.contact-form {
+  height: 100%;
+  padding: 35px;
+  background: var(--dark-card);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-info h3 {
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.contact-item i {
+  font-size: 23px;
+  color: #9c8cff;
+}
+
+.contact-item h5 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact-form label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  background: #0b1222;
+  color: white;
+  border: 1px solid #303a50;
+  padding: 13px;
+  border-radius: 8px;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.15);
+  background: #0b1222;
+  color: white;
+}
+
+.contact-form .form-control::placeholder {
+  color: #8290a8;
+}
+
+.contact-form option {
+  background: #111a2e;
+  color: white;
+}
+
+.map-wrapper {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.map-wrapper iframe {
+  display: block;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.footer-logo {
+  margin-bottom: 15px;
+}
+
+.footer-logo > a > img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.footer {
+  padding: 65px 0 25px;
+  background: #050914;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer h4 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.footer h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.footer a {
+  display: block;
+  color: #a8b1c5;
+  margin-bottom: 12px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: transparent;
+  background: linear-gradient(45deg, #f20a35, #79008d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding-left: 5px;
+  transform: scale(1.08);
+}
+
+.footer hr {
+  border-color: #394054;
+  margin: 35px 0 25px;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: linear-gradient(45deg, #f20a35, #79008d);
+  border-color: transparent;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* ===============================
+   WHATSAPP BUTTON
+================================ */
+.whatsapp-float {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  z-index: 9999;
+  box-shadow: 0 5px 25px rgba(37, 211, 102, 0.45);
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ===============================
+   SCROLL REVEAL
+================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 991px) {
+  .custom-navbar .navbar-collapse {
+    background: #10182a;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 12px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 12px 5px;
+  }
+
+  .hero-section {
+    padding-top: 140px;
+    text-align: center;
+  }
+
+  .hero-content > p {
+    margin: auto;
+  }
+
+  .hero-buttons,
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-image {
+    margin-top: 45px;
+    height: 350px;
+  }
+
+  .section-padding {
+    padding: 75px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 37px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .hero-image {
+    height: 280px;
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  .section-padding {
+    padding: 65px 0;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 25px 18px;
+  }
+
+  .page-banner {
+    padding: 145px 0 70px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .whatsapp-float {
+    width: 54px;
+    height: 54px;
+    right: 18px;
+    bottom: 18px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-content h1 {
+    font-size: 31px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-stats {
+    gap: 15px;
+  }
+}
+
+/* ==========================================
+   FULLY RESPONSIVE DESIGN
+   Desktop | Laptop | Tablet | Mobile
+========================================== */
+
+/* Prevent horizontal overflow */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  min-width: 0;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+.container,
+.container-fluid {
+  width: 100%;
+}
+
+/* ==========================================
+   LARGE DESKTOP (1400px)
+========================================== */
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .hero-content h1 {
+    font-size: 68px;
+  }
+
+  .hero-image {
+    height: 480px;
+  }
+
+  .section-padding {
+    padding: 110px 0;
+  }
+}
+
+/* ==========================================
+   LAPTOP (1200px)
+========================================== */
+
+@media (max-width: 1199px) {
+  .hero-content h1 {
+    font-size: clamp(38px, 5vw, 58px);
+  }
+
+  .hero-image {
+    height: 380px;
+  }
+
+  .hero-stats {
+    gap: 25px;
+  }
+
+  .section-padding {
+    padding: 85px 0;
+  }
+
+  .nav-link {
+    margin: 0 5px;
+    font-size: 13px;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+}
+
+/* ==========================================
+   TABLET & SMALL LAPTOP (991px)
+========================================== */
+
+@media (max-width: 991px) {
+  .custom-navbar {
+    padding: 12px 0;
+  }
+
+  .custom-navbar .navbar-collapse {
+    background: #15121b;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+  }
+
+  .navbar-nav {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    width: 100%;
+    padding: 12px 5px;
+    margin: 0;
+  }
+
+  .nav-link::after {
+    left: 5px;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 50px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 140px 0 75px;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content > p {
+    margin: 0 auto;
+    max-width: 650px;
+  }
+
+  .hero-buttons,
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-image {
+    height: 380px;
+    margin-top: 40px;
+  }
+
+  .section-padding {
+    padding: 75px 0;
+  }
+
+  .about-image {
+    height: 350px;
+  }
+
+  .info-card {
+    padding: 30px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 28px;
+  }
+
+  .footer {
+    text-align: left;
+  }
+
+  .footer-logo > a > img {
+    width: 90px;
+  }
+
+  .footer-social a {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .about-page-banner,
+  .courses-page-banner,
+  .services-page-banner,
+  .contact-page-banner {
+    min-height: 300px;
+    background-position: center;
+  }
+}
+
+/* ==========================================
+   MOBILE LANDSCAPE (767px)
+========================================== */
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 16px;
+  }
+
+  .navbar-brand small {
+    font-size: 9px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-section {
+    padding: 120px 0 60px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(32px, 7vw, 42px);
+    line-height: 1.2;
+    margin: 18px 0;
+  }
+
+  .hero-content > p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .hero-tag,
+  .section-tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .hero-buttons .btn {
+    padding: 11px 20px;
+    font-size: 13px;
+  }
+
+  .hero-image {
+    height: 300px;
+    border-radius: 18px;
+    margin-top: 35px;
+  }
+
+  .hero-stats {
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .hero-stats h3 {
+    font-size: 23px;
+  }
+
+  .hero-stats p {
+    font-size: 11px;
+  }
+
+  .section-padding {
+    padding: 65px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-text {
+    font-size: 14px;
+  }
+
+  .about-image {
+    height: 300px;
+    margin-bottom: 25px;
+  }
+
+  .service-card {
+    padding: 28px 22px;
+  }
+
+  .course-card img {
+    height: 200px;
+  }
+
+  .course-content {
+    padding: 20px;
+  }
+
+  .info-card {
+    padding: 28px 22px;
+  }
+
+  .cta-section {
+    padding: 60px 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 30px;
+  }
+
+  .about-page-banner,
+  .courses-page-banner,
+  .services-page-banner,
+  .contact-page-banner {
+    min-height: 260px;
+    background-position: center;
+  }
+
+  .page-banner {
+    padding: 125px 0 65px;
+  }
+
+  .page-banner h1 {
+    font-size: 36px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 25px 20px;
+  }
+
+  .contact-item {
+    gap: 12px;
+    margin: 22px 0;
+  }
+
+  .map-wrapper iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 50px 0 20px;
+  }
+
+  .footer h4 {
+    font-size: 19px;
+  }
+
+  .footer hr {
+    margin: 25px 0;
+  }
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo > a > img {
+    width: 80px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE (575px)
+========================================== */
+
+@media (max-width: 575px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-image {
+    height: 250px;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 12px;
+  }
+
+  .hero-stats > div {
+    text-align: center;
+  }
+
+  .hero-stats h3 {
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 27px;
+  }
+
+  .section-padding {
+    padding: 55px 0;
+  }
+
+  .about-image {
+    height: 250px;
+  }
+
+  .service-card,
+  .info-card {
+    padding: 25px 20px;
+  }
+
+  .course-card img {
+    height: 190px;
+  }
+
+  .course-content {
+    padding: 18px;
+  }
+
+  .course-content h4,
+  .service-card h4 {
+    font-size: 17px;
+  }
+
+  .cta-section {
+    padding: 50px 15px;
+  }
+
+  .cta-section h2 {
+    font-size: 26px;
+  }
+
+  .cta-section p {
+    font-size: 13px;
+  }
+
+  .about-page-banner,
+  .courses-page-banner,
+  .services-page-banner,
+  .contact-page-banner {
+    min-height: 220px;
+  }
+
+  .page-banner h1 {
+    font-size: 30px;
+  }
+
+  .page-banner {
+    padding: 115px 0 55px;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 22px 16px;
+  }
+
+  .contact-form .form-control,
+  .contact-form .form-select {
+    padding: 11px;
+    font-size: 14px;
+  }
+
+  .map-wrapper iframe {
+    height: 250px;
+  }
+
+  .footer-logo {
+    margin-bottom: 12px;
+  }
+
+  .footer-logo > a > img {
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-social a {
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    bottom: 15px;
+    font-size: 27px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE (400px)
+========================================== */
+
+@media (max-width: 400px) {
+  .navbar-brand {
+    font-size: 14px;
+    gap: 7px;
+  }
+
+  .logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: 29px;
+  }
+
+  .hero-content > p {
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-image {
+    height: 220px;
+  }
+
+  .hero-stats {
+    gap: 18px 8px;
+  }
+
+  .hero-stats h3 {
+    font-size: 19px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .section-padding {
+    padding: 45px 0;
+  }
+
+  .page-banner h1 {
+    font-size: 27px;
+  }
+
+  .about-page-banner,
+  .courses-page-banner,
+  .services-page-banner,
+  .contact-page-banner {
+    min-height: 190px;
+  }
+
+  .contact-item i {
+    font-size: 20px;
+  }
+
+  .contact-item h5 {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES (320px)
+========================================== */
+
+@media (max-width: 350px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .navbar-brand {
+    font-size: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .hero-buttons .btn {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================
+   TOUCH DEVICE OPTIMIZATION
+========================================== */
+
+@media (hover: none) {
+  .service-card:hover,
+  .course-card:hover,
+  .info-card:hover {
+    transform: none;
+  }
+
+  .whatsapp-float:hover {
+    transform: none;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
